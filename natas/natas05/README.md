@@ -47,7 +47,7 @@ cookies = {
 }
 
 res = requests.get(url, auth=auth, cookies=cookies)
-match = re.search(r'<div.*?>\W(.*?)</div>', res.text, re.DOTALL)
+match = re.search(r'<div.*?>\W(.*?)</div>', res.text)
 print(match.group(1))
 ```
 
