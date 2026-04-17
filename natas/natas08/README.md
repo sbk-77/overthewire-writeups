@@ -36,8 +36,12 @@ index-source.html
 4. To retrieve the original secret, reverse the encoding steps:
    - Convert hex → string  
    - Reverse the string  
-   - Base64 decode     
-![](./SecretDecode.png)
+   - Base64 decode   
+5. The decoding performed using CyberChef with the following steps:
+    - From Hex  
+    - Reverse  
+    - From Base64  
+![](./SecretDecoded.png)
 
 #### Proof
 ```text
