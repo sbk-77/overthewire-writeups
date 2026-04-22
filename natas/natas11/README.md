@@ -21,7 +21,7 @@ index-source.html
 
 ### Using Browser
 1. Open the source code.
-2. Open the source code. It shows the `PHP` logic used:
+2. It shows the `PHP` logic used:
     ```php
     <?
     $defaultdata = array( "showpassword"=>"no", "bgcolor"=>"#ffffff");
