@@ -28,6 +28,7 @@ The page allows users to upload an image file and displays it.
     if (! exif_imagetype($_FILES['uploadedfile']['tmp_name'])) {
         echo "File is not an image";
     ```
+    The function `exif_imagetype()` checks the file’s magic bytes (file signature) to determine if it is a valid image.
 3. The form includes a hidden field:
    ```html
    <input type="hidden" name="filename" value="faeusturjs.jpg" />
