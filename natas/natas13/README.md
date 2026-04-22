@@ -23,7 +23,7 @@ The page allows users to upload an image file and displays it.
 
 ### Using Browser & BurpSuite
 1. Open the source code.
-2. Open the source code. It shows the `PHP` logic used:
+2. It shows the `PHP` logic used:
     ```php
     if (! exif_imagetype($_FILES['uploadedfile']['tmp_name'])) {
         echo "File is not an image";
@@ -39,6 +39,7 @@ The page allows users to upload an image file and displays it.
     ```
     - Modify jpeg magic bytes `FF D8 FF E0` using `hexedit` Command Line Tool:
     ![](./magic_bytes.png)
+    - Magic bytes takes place of `aaaa`.
 
 5. Upload the file normally and Intercept this request using BurpSuite:
     ![](./modified_request.png)
