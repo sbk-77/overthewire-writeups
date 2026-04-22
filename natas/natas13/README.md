@@ -66,7 +66,7 @@ session.auth = ("natas13", "trbs5pCjCrkuSknBBKHhaBxq6Wm1j3LC")
 # match = re.search(r'<form(.*?)</div>', res.text, re.DOTALL)
 # print(match.group(0))
 
-# # Step 2: Reveal php logic and XOR encryption
+# # Step 2: Reveal php logic
 # from bs4 import BeautifulSoup  # install with 'pip install bs4'
 # url = base_url + "index-source.html"
 # res = session.get(url)
