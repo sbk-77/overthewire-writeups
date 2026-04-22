@@ -22,7 +22,7 @@ The page allows users to upload an image file and displays it.
 
 ### Using Browser & BurpSuite
 1. Open the source code.
-2. Open the source code. It shows the `PHP` logic used:
+2. It shows the `PHP` logic used:
     ```php
     <?
     function makeRandomPathFromFilename($dir, $fn) {
