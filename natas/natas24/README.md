@@ -2,7 +2,7 @@
 
 ## Overview
 
-This level focuses on exploiting a **PHP `strcmp()` type juggling vulnerability**.
+This level focuses on exploiting a **PHP `strcmp()` type juggling vulnerability**.   
 The goal is to find the password for the next level.
 
 ## Observation
