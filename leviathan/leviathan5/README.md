@@ -49,7 +49,7 @@ JRGj9iWNOb
 Here, leviathan5 SUID prints the password for next level.
 
 ### Password
-`Bub9gZ3BGU`
+`JRGj9iWNOb`
 
 ---
 [Next Level &rarr;](../leviathan6/README.md) 
