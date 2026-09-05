@@ -3,8 +3,7 @@
 * **Platform:** OverTheWire  
 * **Game:** Leviathan  
 * **Level:** 0 → 1  
-
-## Level 0 → 1
+---
 
 ### Login
 
@@ -36,13 +35,13 @@ I searched the file for anything related to the password:
 ```bash
 leviathan0@leviathan:~/.backup$ grep -i "Password" bookmarks.html 
 <DT><A HREF="http://leviathan.labs.overthewire.org/passwordus.html | This will be fixed later, the password for leviathan1 is PiXaSWQqHq" ADD_DATE="1155384634" LAST_CHARSET="ISO-8859-1" ID="rdf:#$2wIU71">password to leviathan1</A>
-
 ```
-
 I found password for `leviathan1` in output.
-
 
 ### Flag
 `PiXaSWQqHq`
 
+---
+[Next Level &rarr;](../leviathan1/README.md)
+---
 
